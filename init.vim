@@ -8,6 +8,7 @@ set expandtab
 set smartindent
 set encoding=utf8
 set noerrorbells
+set termguicolors
 filetype plugin on
 
 
@@ -15,13 +16,17 @@ call plug#begin("~/.config/nvim/plugged")
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 
 
+"Colortheme Setup--------------------
+let ayucolor='dark'
+colorscheme ayu
 
 "Coc Setup--------------------
-let g:coc_global_extensions = ['coc-pyright']
+let g:coc_global_extensions = ['coc-pyright', 'coc-html', 'coc-css', 'coc-json', 'coc-vetur', 'coc-eslint', 'coc-clangd', 'coc-tailwindcss', 'coc-tsserver']
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
